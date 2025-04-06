@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chroma Kit</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://kit.fontawesome.com/b82ddda10e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Color Contrast Checker</h1>
+    <p>Make your colors accessible instantly check contrast for better readability</p>
+
+    <div class="mode-toggle">
+      <button id="rgbMode" class="active">RGB</button>
+      <button id="hslMode">HSL</button>
+      <button id="reverseColors">REVERSE COLORS</button>
+    </div>
+
+    <div class="color-pickers">
+      <div class="color-input">
+        <label for="textColor">Text Color</label>
+        <div class="input-wrapper">
+          <input type="text" id="textColor" value="#000000">
+          <div class="color-preview" id="textColorPreview"></div>
+        </div>
+        <div class="sliders" id="textRgbSliders">
+          <label>R <input type="range" min="0" max="255" id="textR"></label>
+          <label>G <input type="range" min="0" max="255" id="textG"></label>
+          <label>B <input type="range" min="0" max="255" id="textB"></label>
+        </div>
+        <div class="sliders hidden" id="textHslSliders">
+          <label>H <input type="range" min="0" max="360" id="textH"></label>
+          <label>S <input type="range" min="0" max="100" id="textS"></label>
+          <label>L <input type="range" min="0" max="100" id="textL"></label>
+        </div>
+        
+      </div>
+      
+      <div class="color-input">
+        <label for="bgColor">Background Color</label>
+        <div class="input-wrapper">
+          <input type="text" id="bgColor" value="#ffffff">
+          <div class="color-preview" id="bgColorPreview"></div>
+        </div>
+        <div class="sliders" id="bgRgbSliders">
+          <label>R <input type="range" min="0" max="255" id="bgR"></label>
+          <label>G <input type="range" min="0" max="255" id="bgG"></label>
+          <label>B <input type="range" min="0" max="255" id="bgB"></label>
+        </div>
+        <div class="sliders hidden" id="bgHslSliders">
+          <label>H <input type="range" min="0" max="360" id="bgH"></label>
+          <label>S <input type="range" min="0" max="100" id="bgS"></label>
+          <label>L <input type="range" min="0" max="100" id="bgL"></label>
+        </div>
+      </div>
+      <div class="results">
+        <div class="result">
+          <p>AA Normal</p>
+          <div id="aaNormal" class="status">Pass</div>
+        </div>
+        <div class="result">
+          <p>AAA Normal</p>
+          <div id="aaaNormal" class="status">Pass</div>
+        </div>
+        <div class="result">
+          <p>AA Large</p>
+          <div id="aaLarge" class="status">Pass</div>
+        </div>
+        <div class="result">
+          <p>AAA Large</p>
+          <div id="aaaLarge" class="status">Pass</div>
+        </div>
+      </div>
+
+      <div class="contrast-ratio-container">
+        <div class="sample" id="sampleText">Aa</div>
+        <div class="contrast-ratio">
+          <p>Contrast Ratio</p>
+        <div id="contrastRatio" class="status"></div>
+        </div>        
+      </div>
+      
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
