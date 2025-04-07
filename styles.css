@@ -2,7 +2,6 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -10,7 +9,98 @@ body {
     margin: 0;
     padding: 2rem;
     background: #f4f4f4;
+    color: #333;  
+  }
+
+  .header {
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    margin-bottom: 2rem;    
+  }
+  
+  .header .container-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .navbar {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .dropbtn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-weight: 600;
     color: #333;
+  }
+  
+  .dropbtn:hover {
+    color: #555;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    z-index: 200;
+  }
+  
+  .dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    color: #333;
+    transition: background 0.2s ease;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .donate-btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .donate-btn:hover{
+    background: #333;
+    color: white;
   }
   
   .container {
@@ -126,6 +216,11 @@ body {
   }
   
   .mode-toggle button.active {
+    background: #333;
+    color: white;
+  }
+
+  #reverseColors:hover{
     background: #333;
     color: white;
   }
