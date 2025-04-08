@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palette Extractor</title>
+  <link rel="stylesheet" href="colorPaletteExtract.css">
+</head>
+<body>
+  <h1>Color Palette Extractor</h1>
+  <div id="controls">
+    <input type="file" id="upload" accept="image/*" />
+    <input type="text" id="urlInput" placeholder="Image URL" />
+    <button onclick="loadImageFromURL()">Load from URL</button>
+    <button id="randomize">🎲 Randomize</button>
+    <button id="decrease">-</button>
+    <span id="colorCount">5</span>
+    <button id="increase">+</button>
+    <button onclick="copyCSS()">📋 Copy CSS</button>
+  </div>
+  <canvas id="canvas" style="display: none;"></canvas>
+  <img id="img" crossorigin="anonymous" style="max-width: 300px; display: block;"/>
+  <div class="palette" id="palette"></div>
+  <pre id="css-vars"></pre>
+
+  <script src="colorPaletteExtract.js"></script>
+</body>
+</html>
